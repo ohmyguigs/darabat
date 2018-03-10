@@ -4,7 +4,8 @@
   "description": "An album repository",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Sorry, no tests yet \" && exit 1",
+    "setup": "./setup-helpers/dbsetup.sh && node ./setup-helpers/dbpopulate.js"
   },
   "repository": {
     "type": "git",
@@ -20,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/ohmyguigs/darabat/issues"
   },
-  "homepage": "https://github.com/ohmyguigs/darabat#readme"
+  "homepage": "https://github.com/ohmyguigs/darabat#readme",
+  "dependencies": {
+    "mysql": "^2.15.0"
+  }
 }
