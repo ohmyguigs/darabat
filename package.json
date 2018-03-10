@@ -1,0 +1,24 @@
+{
+  "name": "darabat",
+  "version": "1.0.0",
+  "description": "An album repository",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ohmyguigs/darabat.git"
+  },
+  "keywords": [
+    "node",
+    "mysql",
+    "angular"
+  ],
+  "author": "Guigs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ohmyguigs/darabat/issues"
+  },
+  "homepage": "https://github.com/ohmyguigs/darabat#readme"
+}
