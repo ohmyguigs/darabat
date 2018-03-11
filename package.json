@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Sorry, no tests yet \" && exit 1",
-    "setup": "./setup-helpers/dbsetup.sh && node ./setup-helpers/dbpopulate.js"
+    "local-setup": "npm run setup-local-db && npm run local-db-populate",
+    "setup-local-db": "sudo sh ./setup-helpers/dbsetup.sh",
+    "local-db-populate": "node ./setup-helpers/dbpopulate.js"
   },
   "repository": {
     "type": "git",
