@@ -1,9 +1,21 @@
-<main>
-  <h1 class="title">Hello from Angular !</h1>
-
-  <!-- Images (and assets) are parsed and loaded from within the public directory -->
-  <img src="/img/logo.png">
+<main class="flex tc justify-center">
+  <h1 class="white">Hello from Angular !</h1>
 </main>
+<div>
+  <button class="tc justify-between items-center"
+      ng-click="app.hydrateApp()">Get 'em all!</button>
+
+  <div ng-if="app.allAlbums.length > 0">
+    Albums:<hr>
+
+    <ul class="rel-results">
+      <li ng-repeat="album in app.allAlbums">
+        <span>Title: {{ album.title }}</span>
+        <span>Producer: {{ album.producer }}</span>
+      </li>
+    </ul>
+  </div>
+</div>
 <footer>
-  <a ng-href="{{app.url}}">Webpack Angular Starter</a>
+  <a class="v-bottom" ng-href="{{app.url}}">Webpack Angular Starter</a>
 </footer>

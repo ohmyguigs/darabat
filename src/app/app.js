@@ -1,4 +1,8 @@
 import angular from 'angular';
+import {
+  getAllAlbums,
+  checkAPI,
+} from '../services/fetcher'
 
 import '../style/app.css';
 
@@ -11,8 +15,17 @@ let app = () => {
 };
 
 class AppCtrl {
-  constructor() {
+  constructor($scope) {
+    checkAPI()
+    this.$scope = $scope
     this.url = 'https://github.com/preboot/angular-webpack';
+    this.allAlbums = [];
+    this.hydrateApp = () => {
+      console.log('called hydrate app')
+      console.log('getAllAlbums is defined as:', getAllAlbums)
+      getAllAlbums()
+        .then(data => data.forEach(a => this.allAlbums.push(a)))
+    }
   }
 }
 
